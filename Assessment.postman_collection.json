@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "eb9be4fd-f166-4212-a368-ab115af20882",
+		"name": "Credrails Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21142702"
+	},
+	"item": [
+		{
+			"name": "File Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "source",
+							"type": "file",
+							"src": "/C:/Users/USER/CREDRAILS/data_processing/source.csv"
+						},
+						{
+							"key": "target",
+							"type": "file",
+							"src": "/C:/Users/USER/CREDRAILS/data_processing/target.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reconciliation Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "source",
+							"type": "file",
+							"src": "/C:/Users/USER/CREDRAILS/data_processing/source.csv"
+						},
+						{
+							"key": "target",
+							"type": "file",
+							"src": "/C:/Users/USER/CREDRAILS/data_processing/target.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/report/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"report",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
